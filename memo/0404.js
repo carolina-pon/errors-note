@@ -68,3 +68,12 @@ sayHello();
 const arr1 = [1, 2];
 console.log(arr1);
 console.log(...arr1);
+
+const arr2 = [1,2];
+const summaryFunc = (num1, num2) => console.log(num1 + num2);
+
+// これを
+summaryFunc(arr2[0], arr2[1]);
+// スプレッド構文なら下記のように短縮できる
+summaryFunc(...arr2);
+
