@@ -77,3 +77,42 @@ summaryFunc(arr2[0], arr2[1]);
 // スプレッド構文なら下記のように短縮できる
 summaryFunc(...arr2);
 
+
+// ...で順番に展開して、[]で囲んでいるので結果的に新しい配列ができるという理屈
+const arr4 = [30,40];
+const arr5 = [10,20];
+
+const arr6 = [...arr4];
+console.log(arr4);
+console.log(arr6);
+
+const arr7 = [...arr4, ...arr5];
+arr4[0] = 100;
+console.log("ちゃんとできたかな");
+console.log(arr4);
+console.log(arr7);
+
+const obj4 = {val1: 10, val2: 20};
+const obj5 = {val3: 30, val4: 40};
+// コピー
+const obj6 = {...obj4};
+// 結合
+const obj7 = {...obj4, ...obj5};
+
+console.log(obj6);
+console.log(obj7);
+
+const numArr = [1,2,3,4,5];
+const newNumArr = numArr.filter((num) =>{
+  return num % 2 === 1;
+});
+console.log(newNumArr);
+
+// 第二引数を設定できる
+const nameArr = ["山田", "永田"];
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// 三項演算子
+const val1 = 1 > 0 ? "trueンゴ" : "falseンゴ";
+console.log(val1);
+
